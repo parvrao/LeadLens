@@ -16,14 +16,13 @@ client.interceptors.request.use(config => {
   return config;
 });
 
-// Handle 401 globally
+// Handle 401 globally — no redirect, just clear the token
 client.interceptors.response.use(
   res => res,
   err => {
     if (err.response?.status === 401) {
       localStorage.removeItem('prospera_token');
       localStorage.removeItem('prospera_user');
-      window.location.href = '/login';
     }
     return Promise.reject(err);
   }
