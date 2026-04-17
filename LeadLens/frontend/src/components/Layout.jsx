@@ -19,7 +19,7 @@ export default function Layout({ children }) {
       <aside className={`sidebar ${open ? 'sidebar-open' : ''}`}>
         <div className="sidebar-logo">
           <div className="logo-icon"><Zap size={16} fill="currentColor" /></div>
-          <span className="logo-text">PROSPERA</span>
+          <span className="logo-text">LeadLens</span>
         </div>
         <nav className="sidebar-nav">
           {NAV.map(({ to, icon: Icon, label }) => (
