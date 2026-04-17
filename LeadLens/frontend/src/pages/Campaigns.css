@@ -1,0 +1,9 @@
+.camp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+.camp-card { padding: 22px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; transition: all 0.2s; }
+.camp-card:hover { transform: translateY(-2px); box-shadow: var(--glass-shadow-lg); }
+.camp-icon { width: 40px; height: 40px; background: rgba(26,86,219,0.1); backdrop-filter: blur(8px); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.camp-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+.camp-meta { font-size: 11px; color: var(--blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.camp-offer { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+.camp-stats { display: flex; align-items: center; gap: 12px; margin-top: 6px; padding-top: 11px; border-top: 1px solid rgba(0,0,0,0.05); font-size: 12px; color: var(--ink-3); }
+.camp-stats span { display: flex; align-items: center; gap: 4px; }
