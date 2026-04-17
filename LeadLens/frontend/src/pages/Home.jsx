@@ -64,16 +64,16 @@ const WHO_FOR = [
 ]
 
 const COMPARISON = [
-  { feature: 'Data Source', prospera: 'Google Maps live data', manual: 'Manual searching' },
-  { feature: 'Speed', prospera: '50 leads in under 2 minutes', manual: '1 lead per 5 minutes' },
-  { feature: 'Email Writing', prospera: 'AI personalized per lead', manual: 'Copy-paste templates' },
-  { feature: 'Pain Point Research', prospera: 'Gemini AI reads reviews', manual: 'Hours of research' },
-  { feature: 'Data Freshness', prospera: 'Real-time from Google', manual: 'Often weeks out of date' },
-  { feature: 'Cost', prospera: 'Free to start', manual: 'High labor cost' },
+  { feature: 'Data Source', LeadLens: 'Google Maps live data', manual: 'Manual searching' },
+  { feature: 'Speed', LeadLens: '50 leads in under 2 minutes', manual: '1 lead per 5 minutes' },
+  { feature: 'Email Writing', LeadLens: 'AI personalized per lead', manual: 'Copy-paste templates' },
+  { feature: 'Pain Point Research', LeadLens: 'Gemini AI reads reviews', manual: 'Hours of research' },
+  { feature: 'Data Freshness', LeadLens: 'Real-time from Google', manual: 'Often weeks out of date' },
+  { feature: 'Cost', LeadLens: 'Free to start', manual: 'High labor cost' },
 ]
 
 const FAQS = [
-  { q: 'Does Prospera require a Google Places API key?', a: 'No API key is needed to get started. Without one, Prospera returns realistic demo data so you can test the full workflow. Add a Google Places API key in your backend environment to get live business data from any city worldwide.' },
+  { q: 'Does LeadLens require a Google Places API key?', a: 'No API key is needed to get started. Without one, LeadLens returns realistic demo data so you can test the full workflow. Add a Google Places API key in your backend environment to get live business data from any city worldwide.' },
   { q: 'How does the AI email personalization work?', a: 'Gemini AI reads real customer reviews for each business, identifies specific pain points, then writes a cold email that references those findings alongside your offer. Every email is unique — generated fresh for each lead.' },
   { q: 'Can I export my leads?', a: 'Yes. Export any set of leads to CSV from the Lead Intelligence page or from any individual Campaign page. The export includes all data fields: contact info, AI scores, generated emails, and status.' },
   { q: 'What is the AI Score?', a: 'Every lead gets scored 1 to 100 by Gemini AI based on sentiment analysis of their reviews, star rating, review volume, and industry signals. Higher scores indicate businesses that are more likely to be receptive to outreach.' },
@@ -111,7 +111,7 @@ export default function Home() {
           <em>B2B leads that actually convert</em>
         </h1>
         <p className="hero-sub">
-          Prospera scrapes any business category from Google Maps, uses Gemini AI to analyze customer reviews and identify pain points, then writes a personalized cold email for every single lead — automatically.
+          LeadLens scrapes any business category from Google Maps, uses Gemini AI to analyze customer reviews and identify pain points, then writes a personalized cold email for every single lead — automatically.
         </p>
         <div className="hero-actions">
           <Link to="/leads" className="btn btn-primary btn-xl">
@@ -174,7 +174,7 @@ export default function Home() {
                   <span className="badge badge-blue" style={{ marginBottom:12 }}>Pipeline Visualization</span>
                   <h2 className="section-title">Your funnel, visualized in real time</h2>
                   <p style={{ fontSize:14, color:'var(--ink-2)', lineHeight:1.7, margin:'10px 0 20px' }}>
-                    Once you scrape your first leads, Prospera shows your full pipeline — total leads, enriched count, contacted, and conversions — with a live bar chart that updates as you work.
+                    Once you scrape your first leads, LeadLens shows your full pipeline — total leads, enriched count, contacted, and conversions — with a live bar chart that updates as you work.
                   </p>
                   <Link to="/leads" className="btn btn-primary"><Search size={15} /> Scrape your first leads</Link>
                 </div>
@@ -210,7 +210,7 @@ export default function Home() {
         </div>
         <div className="steps-grid">
           {[
-            { n:'1', icon:Search, color:'#1a56db', bg:'rgba(26,86,219,0.07)', title:'Search any category + city', desc:'Type "dental clinics" and "Austin, TX". Prospera pulls every matching business from Google Maps with full contact data and reviews.' },
+            { n:'1', icon:Search, color:'#1a56db', bg:'rgba(26,86,219,0.07)', title:'Search any category + city', desc:'Type "dental clinics" and "Austin, TX". LeadLens pulls every matching business from Google Maps with full contact data and reviews.' },
             { n:'2', icon:Brain, color:'#6d28d9', bg:'rgba(109,40,217,0.07)', title:'AI analyzes their reviews', desc:'Gemini reads up to 50 real customer reviews per business and identifies the exact pain points you can reference in your pitch.' },
             { n:'3', icon:Mail, color:'#057a55', bg:'rgba(5,122,85,0.07)', title:'Personalized email generated', desc:'A unique cold email is written for each business — not a template, but a specific message that references their real situation and rating.' },
             { n:'4', icon:TrendingUp, color:'#b45309', bg:'rgba(180,83,9,0.07)', title:'Track and close in your CRM', desc:'Update status, filter by score, view on the territory map, export to CSV. Your pipeline is always one click away.' },
@@ -248,7 +248,7 @@ export default function Home() {
       <section className="fade-up-3">
         <div className="section-header">
           <div>
-            <p className="section-eyebrow">Who Is Prospera For</p>
+            <p className="section-eyebrow">Who Is LeadLens For</p>
             <h2 className="section-title">Built for anyone who sells to local businesses</h2>
           </div>
         </div>
@@ -271,8 +271,8 @@ export default function Home() {
       <section className="fade-up-3">
         <div className="section-header">
           <div>
-            <p className="section-eyebrow">Why Prospera</p>
-            <h2 className="section-title">Prospera vs. Manual Lead Generation</h2>
+            <p className="section-eyebrow">Why LeadLens</p>
+            <h2 className="section-title">LeadLens vs. Manual Lead Generation</h2>
           </div>
         </div>
         <div className="table-wrap">
@@ -280,18 +280,18 @@ export default function Home() {
             <thead>
               <tr>
                 <th style={{ width:'30%' }}>Feature</th>
-                <th style={{ color:'var(--blue)' }}>✦ Prospera AI</th>
+                <th style={{ color:'var(--blue)' }}>✦ LeadLens AI</th>
                 <th>Manual Searching</th>
               </tr>
             </thead>
             <tbody>
-              {COMPARISON.map(({ feature, prospera, manual }) => (
+              {COMPARISON.map(({ feature, LeadLens, manual }) => (
                 <tr key={feature} style={{ cursor:'default' }}>
                   <td style={{ fontWeight:500, color:'var(--ink)' }}>{feature}</td>
                   <td>
                     <div style={{ display:'flex', alignItems:'center', gap:7 }}>
                       <Check size={14} color="var(--green)" strokeWidth={2.5} />
-                      <span style={{ color:'var(--ink)' }}>{prospera}</span>
+                      <span style={{ color:'var(--ink)' }}>{LeadLens}</span>
                     </div>
                   </td>
                   <td>
@@ -362,7 +362,7 @@ export default function Home() {
           <div className="cta-badge"><Zap size={12} fill="var(--blue)" color="var(--blue)" /> Free to Get Started</div>
           <h2 className="cta-title">Ready to fill your pipeline?</h2>
           <p className="cta-sub">
-            Scrape your first 50 leads for free — no credit card, no setup. Pick a business type, pick a city, and Prospera does the rest.
+            Scrape your first 50 leads for free — no credit card, no setup. Pick a business type, pick a city, and LeadLens does the rest.
           </p>
           <div className="cta-actions">
             <Link to="/leads" className="btn btn-primary btn-xl"><Search size={17} /> Start Scraping Free <ChevronRight size={16} /></Link>
