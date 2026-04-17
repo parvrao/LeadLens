@@ -1,5 +1,5 @@
 // src/hooks/useAuth.jsx
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { authAPI } from '../api/client';
 
 const AuthContext = createContext(null);
