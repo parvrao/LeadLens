@@ -40,7 +40,7 @@ export default function Layout({ children }) {
         <button className="btn btn-ghost btn-icon" onClick={() => setOpen(true)}><Menu size={20} /></button>
         <div style={{ display:'flex', alignItems:'center', gap:8 }}>
           <div className="logo-icon" style={{ width:28, height:28 }}><Zap size={14} fill="currentColor" /></div>
-          <span className="logo-text">PROSPERA</span>
+          <span className="logo-text">LeadLens</span>
         </div>
         <div style={{ width:36 }} />
       </header>
